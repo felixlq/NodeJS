@@ -1,0 +1,72 @@
+
+Com base nos vídeos 1 e 2, explique como a web funciona a partir do ponto de vista do protocolo cliente servidor. 
+Crie o começo de um projeto em node.js, usando o npm e informe os comandos utilizados.
+
+
+Internet Conceito Cliente Servidor
+
+Computadores conectados à web são chamados clientes e servidores. 
+Um diagrama simplificado de como eles interagem pode ter essa aparência:
+
++--------+   requests     +--------+
+| client |=============>> | server |
+|        |<<============= |        |
++--------+   responses    +--------+  
+
+
+Clientes são os típicos dispositivos conectados à internet dos usuários da web 
+(por exemplo, seu computador conectado ao seu Wi-Fi ou seu telefone conectado à sua rede móvel) 
+e programas de acesso à Web disponíveis nesses dispositivos (geralmente um navegador como Firefox ou Chrome).
+
+Servidores são computadores que armazenam páginas, sites ou aplicativos. 
+Quando o dispositivo de um cliente quer acessar uma página, uma cópia dela é baixada do servidor 
+para a máquina do cliente para ser apresentada no navegador web do usuário.
+
+Além do cliente e do servidor, também precisamos nos atentar outros personagens desta história:
++Sua conexão de Internet: permite que você mande e receba dados na web. É basicamente como a rua entre sua casa
+ e a loja.
++ TCP/IP: Protocolo de Controle de Transmissão e Protocolo de Internet (Transmission Control Protocol e 
+Internet Protocol) são protocolos de comunicação que definem como os dados trafegam pela web. 
+São como os mecanismos de transporte que te permitem ir ao shopping, fazer um pedido e comprar seus produtos. 
++ DNS: Servidor de Nome de Domínio (Domain Name Servers) são como um catálogo de endereços para sites. 
+Quando você digita um endereço web no seu navegador, o navegador procura no servidor de DNS para localizar
+o endereço real do site, antes que ele possa recuperar o site. O navegador precisa encontrar em qual servidor
+web a página está hospedada para que ele possa mandar mensagens HTTP ao lugar certo. 
+Isso é como pesquisar o endereço da loja para que você possa entrar em contato.
++ HTTP: Protocolo de Transferência de Hypertexto (Hypertext Transfer Protocol) é um protocolo de aplicação 
+que define uma linguagem para clientes e servidores se comunicarem entre si. É como a linguagem que você usa 
+para encomendar seus produtos.
++ Arquivos componentes: um website é feito de muitos arquivos diferentes, que são como as diferentes partes 
+dos produtos que você comprou na loja. Esses arquivos são divididos em dois tipos principais:
++ Arquivos de Código: os sites são feitos principalmente de HTML, CSS e JavaScript entre várias outras.
++ Recursos: esse é o nome coletivo para todas as outras coisas que compõem um site, como imagens, música, 
+vídeos, documentos do Word e PDFs.
+
+
+
+Para iniciar um projeto em NODEJS.
+Para isso basta abrir o seu prompt de comandos ou terminal, criar a pasta onde ficará o seu projeto e digitar o comando:
+
+npm init
+
+Este comando vai criar o arquivo package.json, que é onde está toda a configuração do seu projeto, includindo, nome, versão, descrição, scripts a serem executados, licença, etc.
+
+Após executar o npm init, o npm vai perguntar algumas informações básicas para montar o package.json. São elas:
+
+package name: Nome do projeto. (Padrão: nome da pasta onde o comando foi executado)
+version: Versão do projeto. (Padrão: 1.0.0)
+description: Uma descrição para o projeto.
+entry point: Arquivo padrão que será utilizado para executar a aplicação. (Padrão: index.js)
+test command: Comando para executar os testes da aplicação.
+git repository: URL do repositório git onde o código-fonte da aplicação será armazenado.
+keyword: Palavras-chave relevantes para ajudar as pessoas a encontrarem o seu projeto.
+author: Autor do projeto.
+license Tipo de licença do projeto. (Padrão: ISC)
+Após informar todos esses dados o programa apresenta no console o conteúdo do arquivo package.json que será criado com as informações que passamos.
+Para confirmar a criação do arquivo para reponder yes.
+
+Feito isso o arquivo package.json será criado na pasta raís do seu projeto.
+
+alternativamente você pode usar o seguinte comando: 
+npm init -y
+assim o arquivo package.json será criado sem perguntas e vc poderá editá-lo quando quiser.
