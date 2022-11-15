@@ -5,6 +5,10 @@
 //NODE SERVIDOR.JS
 //Siga as instruções no terminal para promover o teste.
 
+//cores para o alerta do servidor
+red = '\u001b[31m';
+green = '\u001b[32m';
+reset = '\u001b[0m';
 
 const http = require('http')
 const server = http.createServer((requisicao, resposta) => {
@@ -23,6 +27,6 @@ const server = http.createServer((requisicao, resposta) => {
 
 })
 server.listen(3000, 'localhost', () => {
-    console.log('Servidor ATIVO\nPara testá-lo em seu Navegador digite:\nlocalhost:3000\nlocalhost:3000/pagina2\nlocalhost:3000/pagina3')
-    console.log('Desligue o servidor com Ctrl + C');
+    console.log(gree + 'Servidor ATIVO\nPara testá-lo em seu Navegador digite:\nlocalhost:3000\nlocalhost:3000/pagina2\nlocalhost:3000/pagina3' + reset)
+    console.log(red + 'Desligue o servidor com Ctrl + C' + reset);
 })

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE DE GET E POST</title>
+</head>
+
+<body>
+    <h1>TESTE DE GET E POST</h1>
+    <h2>Teste do Método GET</h2>
+    <form action="http://127.0.0.1:8080/teste_get" method="get">
+        <!--MÉTODO GET-->
+        Nome: <input type="text" name="nome"><br>
+        Idade: <input type="number" name="idade"><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <br>
+    <p>Nome e idades digitados aparecem na URL após o sinal de Interrogação [?].</p>
+    <p>Utilizado para consultas, os dados são expostos.</p>
+    <br>
+    <br>
+    <h2>Teste do Método POST</h2>
+    <form action="http://127.0.0.1:8080/teste_post" method="post">
+        <!--MÉTODO POST-->
+        Nome: <input type="text" name="nome"><br>
+        Idade: <input type="number" name="idade"><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <br>
+    <p>Nome e Idade digitados podem ser direcionados a um local da sua escolha de forma segura.</p>
+    <p>Utilizado para alimentar algum recurso com as informações, os dados não são expostos.</p>
+</body>
+
+</html>
