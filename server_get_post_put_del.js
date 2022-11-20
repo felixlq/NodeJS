@@ -10,7 +10,8 @@ INSTRUÇÕES:
 Para simular o ambiente client e rodar o código siga os seguintes passos:
 baixe e instale o insomnia em: https://insomnia.rest/download
 
-utilize a imagem em: insomnia_projeto.jpg
+Utilize a imagem em: insomnia_projeto.jpg para visualizar
+
 Em um novo projeto: 
 
     1) crie um ambiente;
@@ -18,7 +19,7 @@ Em um novo projeto:
     3) selecione o método para cada HTTP REQUEST;
     4) indique o endereço e porta de cada rota a ser chamada;
     5) pressione [Send] para chamar a rota escolhida;
-    6) resposta dada por cada método;
+    6) local onde mostra a resposta dada por cada método;
 
     OBS o servidor (server_get_post_del.js) precisa estar rodando.
     para rodar o servidor ==> npx nodemon server_get_post_del.js
