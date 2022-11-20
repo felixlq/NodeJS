@@ -4,14 +4,18 @@ com os parâmetros enviados pelo placeholder nas requisições.
 Exemplo: a rota “/listar/50” vai retornar o HTTP 404; a rota /listar/10 vai retornar o HTTP 200 com alguma
 string.*/
 
+//USE O INSOMNIA PARA TESTAR AS ROTAS
+
+
+
 const bodyParser = require('body-parser')
 const express = require('express')
-const cors = require('cors')
+//const cors = require('cors')
 const app = express()
 const port = 8080
 
 app.use(bodyParser.json())
-app.use(cors())
+//app.use(cors())
 
 
 const biblioteca = [
@@ -65,7 +69,7 @@ app.delete('/biblioteca/delete_artigo/:id', (req, res)=> {
     let id = req.params.id
     if (id > 0 && id <= biblioteca.length){
         biblioteca.splice(id - 1, 1)
-        res.status(200).send('Artigo removido')
+        res.status(200).send(`${id}º Artigo Removido`)
         console.log('Página teste >> Deletar Artigo << - status (200)');
     } else {
         res.status (404).send ('Artigo não encontrado')
