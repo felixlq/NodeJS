@@ -15,7 +15,7 @@ app.use(cors())
 
 
 const biblioteca = [
-    { titulo: '1º artigo' }
+    { título: '1º artigo' }
 ]
 
 app.get('/', (req, res) => {
@@ -25,10 +25,11 @@ app.get('/', (req, res) => {
 
 app.post('/biblioteca/add', (req, res) => {
     let post = req.body
-    let artigo = biblioteca.length + 1+'º artigo'
+    let artigo = biblioteca.length + 1 +'º artigo'
     biblioteca.push(post)
-    post.artigo = artigo
+    post.título = artigo
     res.status(201).send(post)
+    console.log(req.body);
     console.log(`Página teste >> Adcionar Artigo << - ${artigo} adcionado - status (201)`)
 })
 
@@ -50,9 +51,9 @@ app.get('/biblioteca/ver_todos', (req, res) => {
 app.put('/biblioteca/edit_artigo/:id', (req, res)=>{
     let id = req.params.id
     if (id > 0 && id <= biblioteca.length){
-        req.body = { titulo: 'Artigo editado'}
         let post = req.body
-        biblioteca[id - 1] =  post
+        post = {título: 'Arquivo Editado'}
+        biblioteca.splice(id-1,1,post)
         res.status(200).send(post)
         console.log('Página teste >> Editar Artigo << - status (200)');
     } else {
